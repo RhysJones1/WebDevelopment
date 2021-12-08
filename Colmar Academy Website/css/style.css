@@ -1,0 +1,574 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+* {
+  line-height: 2;
+}
+
+html {
+  font-family: "Assistant", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: white;
+  color: darkcyan;
+}
+
+a {
+  color: mediumturquoise;
+  text-decoration: none;
+  transition: color 500ms ease-in;
+}
+
+a:hover {
+  color: darkgoldenrod;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* header section */
+
+header {
+  border-bottom: 1px solid grey;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 5;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.logo img {
+  height: 55px;
+}
+
+.logo .one {
+  font-size: 32px;
+  color: darkcyan;
+  font-weight: 900;
+}
+
+.logo .two {
+  font-size: 32px;
+  color: darkturquoise;
+  font-weight: 100;
+}
+
+.nav li {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 16px;
+  font-size: 24px;
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media only screen and (max-width: 540px) {
+  header {
+    display: none;
+  }
+  .mobile-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    z-index: 5;
+    background-color: white;
+  }
+
+  .mobile-header img {
+    height: 45px;
+  }
+
+  .mobile-header a {
+    transition: border 500ms ease-out 300ms;
+  }
+
+  .mobile-header a:hover {
+    border: 2px solid darkcyan;
+    border-radius: 3px;
+  }
+}
+
+/* start here main image section */
+
+.start {
+  display: flex;
+  align-items: center;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+  background-color: darkcyan;
+  color: white;
+  top: 62px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+}
+
+.start img {
+  margin: 32px 24px 0 24px;
+  width: 62%;
+}
+
+.new {
+  text-align: center;
+  margin-right: 30px;
+  line-height: 1.4;
+}
+
+.new h1 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 80px;
+  color: mediumturquoise;
+  background-color: white;
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 20px;
+  transition: all 500ms ease-in;
+}
+
+.btn:hover {
+  background-color: darkturquoise;
+  color: darkgoldenrod;
+}
+
+@media only screen and (max-width: 540px) {
+  .start {
+    flex-direction: column;
+  }
+  .start img {
+    width: 100%;
+    margin: 0;
+  }
+  .new {
+    padding: 32px 16px;
+    text-align: left;
+  }
+  .btn {
+    width: 90%;
+    margin: 24px 0;
+    padding: 10px 0;
+  }
+}
+
+/* Keep practicing section */
+
+.practice {
+  position: relative;
+  top: 60px;
+  display: flex;
+  background-color: white;
+  color: darkcyan;
+}
+
+.testimonial {
+  width: 60%;
+  margin-left: 24px;
+}
+
+.testimonial img {
+  width: 90%;
+  margin: 32px 24px 32px 0;
+}
+
+.testimonial p {
+  margin: 24px 0;
+  width: 90%;
+  line-height: 1.4;
+}
+
+.testimonial h6 {
+  margin-bottom: 32px;
+  font-weight: 600;
+}
+
+.events {
+  margin: 16px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 10px;
+  border-left: 1px solid lightgrey;
+  padding-left: 16px;
+}
+
+.events img {
+  width: 35%;
+  height: 100%;
+}
+
+.events a {
+  color: mediumturquoise;
+  transition: color 500ms ease-in;
+}
+
+.events a:hover {
+  color: darkgoldenrod;
+}
+
+.info {
+  width: 65%;
+}
+
+.options {
+  display: flex;
+  height: 30%;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid lightgrey;
+}
+
+.options img {
+  display: block;
+  margin-right: 20px;
+  width: 30%;
+}
+
+.guest {
+  background-color: darkcyan;
+  color: white;
+}
+
+.events p {
+  margin: 8px 0;
+  line-height: 1.2;
+}
+
+.options .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 540px) {
+  .testimonial {
+    display: none;
+  }
+  .events {
+    width: 100%;
+    border-left: none;
+    margin: 16px 16px 24px 16px;
+  }
+  .options {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+  .options .desktop {
+    display: none;
+  }
+  .options .mobile {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  .info {
+    width: 100%;
+    margin-top: 24px;
+    line-height: 1.6;
+  }
+  .guest {
+    background-color: white;
+    color: darkcyan;
+  }
+}
+
+/* Start learning section */
+
+.learn {
+  position: relative;
+  top: 100px;
+  max-height: 1200px;
+  display: inline-block;
+  width: 100%;
+  background-color: darkcyan;
+}
+
+.title {
+  text-align: center;
+  padding-top: 32px;
+  color: white;
+}
+
+.row-one {
+  display: flex;
+  justify-content: space-around;
+  margin: 32px 72px;
+}
+
+.row-one img {
+  width: 100%;
+  height: 150px;
+}
+
+.row-two {
+  display: flex;
+  justify-content: space-around;
+  margin: 32px 72px;
+}
+
+.row-two img {
+  width: 100%;
+  height: 150px;
+}
+
+.course {
+  width: 30%;
+  background-color: white;
+  color: darkcyan;
+}
+
+.text {
+  padding: 16px 24px 24px 16px;
+  line-height: 1.4;
+}
+
+.text h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.text h3 {
+  margin-bottom: 8px;
+}
+
+.learn-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 540px) {
+  .row-one, .row-two {
+    display: none;
+  }
+  .learn {
+    background-color: white;
+    margin-bottom: 32px;
+    top: 50px;
+  }
+  .title {
+    color: darkcyan;
+  }
+  .learn-mobile {
+    display: block;
+    position: relative;
+    top: 50px;
+    margin: 0;
+  }
+  .learn-mobile .btn {
+    color: white;
+    background-color: darkcyan;
+    text-align: left;
+    padding: 24px 0 24px 16px;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 8px;
+  }
+  .learn-mobile .btn:hover {
+    background-color: darkturquoise;
+    color: darkgoldenrod;
+  }
+}
+
+/* Thesis Exhibit Section */
+
+.thesis {
+  position: relative;
+  top: 100px;
+  width: 100%;
+}
+
+.thesis h1 {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.urban {
+  width: 60%;
+  margin: 0 24px 24px 24px;
+}
+
+video {
+  width: 100%;
+}
+
+.about {
+  padding: 24px 24px 32px 0;
+  line-height: 1.4;
+}
+
+.about h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.others {
+  display: block;
+  height: 200px;
+  width: 40%;
+  margin-right: 16px;
+}
+
+.others img {
+  display: block;
+  width: 35%;
+  max-height: 150px;
+  margin: 16px;
+}
+
+.fisma {
+  background-color: darkcyan;
+  color: white;
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+
+.ny {
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+
+.more {
+  width: 65%;
+  padding-right: 10px;
+}
+
+.more h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 540px) {
+  .about, .others {
+    display: none;
+  }
+  .thesis {
+    top: 50px;
+  }
+  .urban {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* footer */
+
+footer {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  background-color: darkcyan;
+  color: white;
+}
+
+footer p {
+  padding: 16px 0 0 24px;
+}
+
+.bottom-nav li {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 16px 24px 0 0;
+}
+
+.bottom-nav a {
+  color: mediumturquoise;
+  transition: color 500ms ease-in;
+}
+
+.bottom-nav a:hover {
+  color: darkgoldenrod;
+}
+
+@media only screen and (max-width: 540px) {
+  footer {
+    top: 50px;
+  }
+  .bottom-nav {
+    display: none;
+  }
+  footer p {
+    margin-top: 24px;
+  }
+}
